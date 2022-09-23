@@ -10,7 +10,7 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background-color: black;
+  background-color: grey;
   background-size: cover;
   background-position: center;
 }
