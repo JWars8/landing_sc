@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head><meta charset="utf-8">
+	<title>Signi Company</title>
+	<link href="style.css" rel="stylesheet" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="media/signi.png" rel="icon"/>
+</head>
+<body>
+<p><img src="https://signicompany.com/media/header.png" /></p>
+
+<div class="wrapper" style="padding-bottom: 200px !important;">
+<div class="title" style="padding-bottom: 40px !important;"><span>SIGNI COMPANY</span><br />
+Estar&aacute; disponible pronto!</div>
+
+<div class="count-down">
+<div class="timer day">
+<div class="count">
+<div class="numb">00</div>
+
+<div class="text">D&iacute;as</div>
+</div>
+</div>
+
+<div class="clone">:</div>
+
+<div class="timer hour">
+<div class="count">
+<div class="numb">00</div>
+
+<div class="text">Horas</div>
+</div>
+</div>
+
+<div class="clone">:</div>
+
+<div class="timer min">
+<div class="count">
+<div class="numb">00</div>
+
+<div class="text">Minutos</div>
+</div>
+</div>
+
+<div class="clone">:</div>
+
+<div class="timer sec">
+<div class="count">
+<div class="numb">00</div>
+
+<div class="text">Segundos</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+         const day = document.querySelector(".day .numb");
+         const hour = document.querySelector(".hour .numb");
+         const min = document.querySelector(".min .numb");
+         const sec = document.querySelector(".sec .numb");
+         var timer = setInterval(()=>{
+           var currentDate = new Date().getTime();
+           var launchDate = new Date('NOV 01, 2022 23:59:00').getTime();
+           var duration = launchDate - currentDate;
+           var days = Math.floor(duration / (1000 * 60 * 60 * 24));
+           var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+           var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+           var seconds = Math.floor((duration % (1000 * 60)) / 1000);
+           day.innerHTML = days;
+           hour.innerHTML = hours;
+           min.innerHTML = minutes;
+           sec.innerHTML = seconds;
+           if(days < 10){
+             day.innerHTML = '0' + days;
+           }
+           if(hours < 10){
+             hour.innerHTML = '0' + hours;
+           }
+           if(minutes < 10){
+             min.innerHTML = '0' + minutes;
+           }
+           if(seconds < 10){
+             sec.innerHTML = '0' + seconds;
+           }
+           if(duration < 0){
+             clearInterval(timer);
+           }
+         }, 1000);
+      </script></body>
+</html>
