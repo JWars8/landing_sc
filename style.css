@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+  color: #fff;
+  max-width: 900px;
+  text-align: center;
+  padding: 0 50px;
+  color: #B0AFB5;
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 500;
+  color: #B0AFB5;
+}
+.wrapper .title span{
+  font-weight: 700;
+}
+.wrapper .count-down{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper .count-down .timer{
+  height: 100%;
+  width: 100px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #077DAF;
+}
+.count-down .timer .numb{
+  font-size: 25px;
+  font-weight: 500;
+}
+.count-down .timer .text{
+  font-size: 15px;
+}
+.count-down .clone{
+  font-size: 45px;
+  padding: 30px;
+}
+@media (max-width: 630px) {
+  .wrapper .count-down{
+    height: 80px;
+  }
+  .wrapper .count-down .timer{
+    width: 80px;
+  }
+  .count-down .timer .numb{
+    font-size: 20px;
+  }
+  .count-down .timer .text{
+    font-size: 13px;
+  }
+  .count-down .clone{
+    font-size: 40px;
+    padding: 30px;
+  }
+}
+@media (max-width: 340px){
+  .wrapper .count-down{
+    height: 30px;
+  }
+  .wrapper .count-down .timer{
+    width: 30px;
+  }
+}
+@media (max-width: 542px){
+  .wrapper{
+    padding: 0 20px;
+  }
+  .wrapper .count-down .timer{
+    border: none;
+  }
+  .count-down .timer .numb{
+    font-size: 28px;
+  }
+  .count-down .timer .text{
+    font-size: 15px;
+  }
+  .count-down .clone{
+    display: none;
+    padding: 30px;
+  }
+  .form .email-field button{
+    width: 150px;
+    font-size: 17px;
+  }
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 50px;
+}
